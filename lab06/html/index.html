@@ -3,128 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Buscador de Universidades</title>
+    <title>Formulario - Universidades</title>
 </head>
 <body>
-    <!-- Formulario principal para búsqueda de universidades -->
-    <form class="formulario" action="/cgi-bin/busqueda.pl" method="get">
-        <h1 class="titulo">Explora Universidades</h1>
+    <form action="/cgi-bin/procesar_formulario.cgi" method="post">
+        <h1>Formulario de Universidades</h1>
 
-        <!-- Selección del departamento -->
-        <div class="input-part">
-            <label for="DEPARTAMENTO">Departamento:</label>
-            <select name="DEPARTAMENTO" id="DEPARTAMENTO">
-                <option value="DEPARTAMENTO" disabled selected>Selecciona un departamento</option>
-                <option value="AMAZONAS">Amazonas</option>
-                <option value="ÁNCASH">Áncash</option>
-                <option value="APURÍMAC">Apurímac</option>
-                <option value="AREQUIPA">Arequipa</option>
-                <option value="AYACUCHO">Ayacucho</option>
-                <option value="CAJAMARCA">Cajamarca</option>
-                <option value="CALLAO">Callao</option>
-                <option value="CUSCO">Cusco</option>
-                <option value="HUANCAVELICA">Huancavelica</option>
-                <option value="HUÁNUCO">Huánuco</option>
-                <option value="ICA">Ica</option>
-                <option value="JUNÍN">Junín</option>
-                <option value="LA LIBERTAD">La Libertad</option>
-                <option value="LAMBAYEQUE">Lambayeque</option>
-                <option value="LIMA">Lima</option>
-                <option value="LORETO">Loreto</option>
-                <option value="MADRE DE DIOS">Madre de Dios</option>
-                <option value="MOQUEGUA">Moquegua</option>
-                <option value="PASCO">Pasco</option>
-                <option value="PIURA">Piura</option>
-                <option value="PUNO">Puno</option>
-                <option value="SAN MARTÍN">San Martín</option>
-                <option value="TACNA">Tacna</option>
-                <option value="TUMBES">Tumbes</option>
-                <option value="UCAYALI">Ucayali</option>
-            </select>
-        </div>
+        <!-- Selección de Departamento -->
+        <label for="departamento">Departamento:</label>
+        <select id="departamento" name="departamento">
+            <option value="DEPARTAMENTO" disabled selected>Departamento</option>
+            <option value="AMAZONAS">Amazonas</option>
+            <option value="ÁNCASH">Áncash</option>
+            <option value="APURÍMAC">Apurímac</option>
+            <option value="AREQUIPA">Arequipa</option>
+            <option value="AYACUCHO">Ayacucho</option>
+            <option value="CAJAMARCA">Cajamarca</option>
+            <option value="CALLAO">Callao</option>
+            <option value="CUSCO">Cusco</option>
+            <option value="HUANCAVELICA">Huancavelica</option>
+            <option value="HUÁNUCO">Huánuco</option>
+            <option value="ICA">Ica</option>
+            <option value="JUNÍN">Junín</option>
+            <option value="LA LIBERTAD">La Libertad</option>
+            <option value="LAMBAYEQUE">Lambayeque</option>
+            <option value="LIMA">Lima</option>
+            <option value="LORETO">Loreto</option>
+            <option value="MADRE DE DIOS">Madre de Dios</option>
+            <option value="MOQUEGUA">Moquegua</option>
+            <option value="PASCO">Pasco</option>
+            <option value="PIURA">Piura</option>
+            <option value="PUNO">Puno</option>
+            <option value="SAN MARTÍN">San Martín</option>
+            <option value="TACNA">Tacna</option>
+            <option value="TUMBES">Tumbes</option>
+            <option value="UCAYALI">Ucayali</option>
+        </select>
+        <br><br>
 
-        <!-- Campo para la provincia -->
-        <div class="input-part">
-            <label for="PROVINCIA">Provincia:</label>
-            <select name="PROVINCIA" id="PROVINCIA">
-                <option value="PROVINCIA" disabled selected>Selecciona una provincia</option>
-                <option value="LIMA">Lima</option>
-                <option value="HUARAZ">Huaraz</option>
-                <option value="CUSCO">Cusco</option>
-                <option value="CHICLAYO">Chiclayo</option>
-                <option value="TRUJILLO">Trujillo</option>
-                <option value="TACNA">Tacna</option>
-                <option value="PIURA">Piura</option>
-            </select>
-        </div>
+        <!-- Selección de Provincia -->
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia">
+            <option value="PROVINCIA" disabled selected>Provincia</option>
+            <option value="LIMA">Lima</option>
+            <option value="HUAMANGA">Huamanga</option>
+            <option value="TRUJILLO">Trujillo</option>
+            <option value="AREQUIPA">Arequipa</option>
+            <option value="MAYNAS">Maynas</option>
+            <option value="PUNO">Puno</option>
+            <option value="CAJAMARCA">Cajamarca</option>
+            <option value="PIURA">Piura</option>
+            <option value="TACNA">Tacna</option>
+            <option value="HUARAZ">Huaraz</option>
+            <option value="CORONEL PORTILLO">Coronel Portillo</option>
+            <option value="CUSCO">Cusco</option>
+            <option value="CHICLAYO">Chiclayo</option>
+            <option value="CHACHAPOYAS">Chachapoyas</option>
+            <option value="ANGARAES">Angaraes</option>
+            <option value="ANDAHUAYLAS">Andahuaylas</option>
+            <option value="MARISCAL NIETO">Mariscal Nieto</option>
+            <option value="SAN ROMÁN">San Román</option>
+            <option value="JAÉN">Jaén</option>
+            <option value="CHOTA">Chota</option>
+            <option value="BARRANCA">Barranca</option>
+            <option value="CAÑETE">Cañete</option>
+            <option value="BAGUA">Bagua</option>
+            <option value="CHANCHAMAYO">Chanchamayo</option>
+            <option value="ALTO AMAZONAS">Alto Amazonas</option>
+            <option value="TARMA">Tarma</option>
+            <option value="HUANTA">Huanta</option>
+            <option value="HUANCAYO">Huancayo</option>
+            <option value="TAYACAJA">Tayacaja</option>
+            <option value="SÁNCHEZ CARRIÓN">Sánchez Carrión</option>
+            <option value="ICA">Ica</option>
+            <option value="LEÓNCIO PRADO">Leóncio Prado</option>
+            <option value="HUÁNUCO">Huánuco</option>
+            <option value="PASCO">Pasco</option>
+            <option value="PROV. CONST. DEL CALLAO">Prov. Const. del Callao</option>
+            <option value="HUAURA">Huaura</option>
+            <option value="LAMBAYEQUE">Lambayeque</option>
+            <option value="SAN MARTÍN">San Martín</option>
+            <option value="ABANCAY">Abancay</option>
+            <option value="TUMBES">Tumbes</option>
+            <option value="SANTA">Santa</option>
+            <option value="HUANCAVELICA">Huancavelica</option>
+            <option value="LA CONVENCIÓN">La Convención</option>
+            <option value="HUAROCHERÍ">Huarocherí</option>
+            <option value="UTCUBAMBA">Utcubamba</option>
+            <option value="SULLANA">Sullana</option>
+        </select>
+        <br><br>
 
-        <!-- Campo para el distrito -->
-        <div class="input-part">
-            <label for="DISTRITO">Distrito:</label>
-            <select name="DISTRITO" id="DISTRITO">
-                <option value="DISTRITO" disabled selected>Selecciona un distrito</option>
-                <option value="LIMA">Lima</option>
-                <option value="BREÑA">Breña</option>
-                <option value="JESÚS MARÍA">Jesús María</option>
-                <option value="SURCO">Santiago de Surco</option>
-                <option value="LA MOLINA">La Molina</option>
-                <option value="AREQUIPA">Arequipa</option>
-                <option value="PUNO">Puno</option>
-            </select>
-        </div>
+        <!-- Selección de Distrito -->
+        <label for="distrito">Distrito:</label>
+        <select id="distrito" name="distrito">
+            <option value="DISTRITO" disabled selected>Distrito</option>
+            <!-- Agregar distritos aquí según corresponda -->
+        </select>
+        <br><br>
 
-        <!-- Campo para ingresar el nombre de la universidad -->
-        <div class="input-part">
-            <label for="NOMBRE">Nombre exacto de la universidad:</label>
-            <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Ejemplo: Universidad Nacional de Lima">
-        </div>
-
-        <!-- Selección del tipo de gestión -->
-        <div class="input-part">
-            <label for="TIPO_GESTION">Tipo de gestión:</label>
-            <select name="TIPO_GESTION" id="TIPO_GESTION">
-                <option value="TIPO" disabled selected>Selecciona el tipo de gestión</option>
-                <option value="PRIVADO">Privada</option>
-                <option value="PÚBLICO">Pública</option>
-            </select>
-        </div>
-
-        <!-- Estado de licenciamiento -->
-        <div class="input-part">
-            <label for="ESTADO_LICENCIAMIENTO">Estado de licenciamiento:</label>
-            <select name="ESTADO_LICENCIAMIENTO" id="ESTADO_LICENCIAMIENTO">
-                <option value="ESTADO" disabled selected>Selecciona el estado</option>
-                <option value="LICENCIA OTORGADA">Licencia otorgada</option>
-                <option value="LICENCIA DENEGADA">Licencia denegada</option>
-                <option value="NO PRESENTADO">No presentado</option>
-            </select>
-        </div>
-
-        <!-- Fechas para búsqueda -->
-        <div class="input-part">
-            <label for="FECHA_INICIO">Fecha de inicio:</label>
-            <input type="date" name="FECHA_INICIO" id="FECHA_INICIO">
-        </div>
-        <div class="input-part">
-            <label for="FECHA_FIN">Fecha de fin:</label>
-            <input type="date" name="FECHA_FIN" id="FECHA_FIN">
-        </div>
-
-        <!-- Periodo de licenciamiento -->
-        <div class="input-part">
-            <label for="PERIODO_LICENCIAMIENTO">Período (años):</label>
-            <input type="number" name="PERIODO_LICENCIAMIENTO" id="PERIODO_LICENCIAMIENTO" placeholder="Ejemplo: 5">
-        </div>
-
-        <!-- Botón para enviar el formulario -->
-        <button class="buscar" type="submit">Buscar</button>
+        <input type="submit" value="Enviar">
     </form>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>Nota: Por favor, asegúrate de completar todos los campos obligatorios antes de enviar.</p>
-    </footer>
 </body>
 </html>
-
