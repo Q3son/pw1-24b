@@ -6,48 +6,51 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;  /* Cambio para alejar el contenido del centro */
+    justify-content: flex-start;
     background: url('fondoU.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     overflow-y: auto;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .formulario {
-    background: rgba(0, 0, 0, 0.6); /* Un fondo más oscuro pero menos denso */
-    width: 400px;
-    padding: 25px;
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 380px;
+    padding: 30px;
+    border-radius: 25px;
     border: none;
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4); /* Sombra más marcada */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    position: absolute;
+    top: 50%;
+    left: 10%;  /* Formulario hacia la izquierda */
+    transform: translateY(-50%);
     transition: all 0.3s ease;
 }
 
 .formulario:hover {
-    transform: translateY(-10px); /* Efecto suave al pasar el mouse */
+    transform: translateY(-50%) scale(1.03); /* Efecto de leve agrandamiento */
 }
 
 .titulo {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-align: center;
     font-size: 1.8em;
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.6); /* Mejor sombra para destacar */
-    letter-spacing: 3px;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    letter-spacing: 4px;
 }
 
 .input-part {
     display: flex;
     width: 100%;
     position: relative;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .input-part input,
@@ -56,7 +59,7 @@ body {
     padding: 14px 18px;
     border-radius: 25px;
     border: none;
-    background: rgba(255, 255, 255, 0.3); /* Fondo ligeramente transparente */
+    background: rgba(255, 255, 255, 0.3);
     color: #ffffff;
     font-weight: 500;
     font-size: 1em;
@@ -65,7 +68,7 @@ body {
 
 .input-part input:focus,
 .input-part select:focus {
-    border-color: #ff6b81; /* Color más vibrante en el foco */
+    border-color: #ff6b81; 
     background: rgba(255, 255, 255, 0.4);
     outline: none;
 }
@@ -86,9 +89,9 @@ body {
 
 .buscar {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 35px;
     padding: 14px;
-    background: linear-gradient(135deg, #ff6b81, #ff3d5c); /* Colores más modernos */
+    background: linear-gradient(135deg, #ff6b81, #ff3d5c);
     border: none;
     border-radius: 25px;
     color: white;
@@ -99,13 +102,13 @@ body {
 }
 
 .buscar:hover {
-    transform: translateY(-3px); /* Efecto de elevación en hover */
+    transform: translateY(-3px);
     background: linear-gradient(135deg, #ff3d5c, #ff6b81);
 }
 
 .buscar:focus {
     outline: none;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
 }
 
 label {
