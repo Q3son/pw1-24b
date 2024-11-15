@@ -5,40 +5,35 @@ body {
     box-sizing: border-box;  
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
     background: url('fondoU.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
-    overflow-y: auto;
-    padding-top: 40px;
+    overflow-x: hidden;
 }
 
 .formulario {
     background: rgba(0, 0, 0, 0.6); /* Fondo oscuro para contrastar con la imagen */
-    width: 400px; /* Formulario más ancho */
-    padding: 35px;
-    border-radius: 15px; /* Bordes más redondeados */
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 900px; /* No se va a expandir más de 900px */
+    padding: 20px;
+    border-radius: 15px;
     border: none;
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4);
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Disposición horizontal */
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%; /* Centrado completo */
-    transform: translate(-50%, -50%); /* Correcta posición centrada */
-    transition: all 0.3s ease;
-}
-
-.formulario:hover {
-    transform: translate(-50%, -50%) scale(1.03); /* Leve agrandamiento al hacer hover */
+    justify-content: space-between; /* Espacio entre los campos */
+    position: relative;
+    overflow: hidden;
 }
 
 .titulo {
-    margin-bottom: 30px;
-    text-align: center;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.8em;
     font-weight: 700;
     color: #ffffff;
@@ -48,7 +43,8 @@ body {
 
 .input-part {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    width: 30%;
     position: relative;
     margin-top: 20px;
 }
@@ -56,44 +52,35 @@ body {
 .input-part input,
 .input-part select {
     width: 100%;
-    padding: 14px 18px;
-    border-radius: 10px; /* Bordes de los inputs más suaves */
+    padding: 12px;
+    border-radius: 10px;
     border: none;
     background: rgba(255, 255, 255, 0.3);
     color: #ffffff;
     font-weight: 500;
     font-size: 1em;
+    margin-bottom: 10px; /* Espacio entre los inputs */
     transition: all 0.3s ease;
 }
 
 .input-part input:focus,
 .input-part select:focus {
-    border-color: #ff6b81; 
     background: rgba(255, 255, 255, 0.4);
     outline: none;
+    border-color: #ff6b81;
 }
 
 .input-part input::placeholder {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.input-part select {
-    appearance: none;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.input-part select option {
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-}
-
 .buscar {
-    width: 100%;
-    margin-top: 35px;
+    width: 30%;
+    margin-top: 0;
     padding: 14px;
     background: linear-gradient(135deg, #ff6b81, #ff3d5c);
     border: none;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px;
     color: white;
     font-weight: bold;
     font-size: 16px;
