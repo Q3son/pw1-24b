@@ -7,9 +7,22 @@
     <title>Universidades Peruanas</title>
 </head>
 <body>
-    <!-- Formulario de búsqueda inicial -->
     <form class="formulario" action="/cgi-bin/busqueda.pl" method="get">
         <h1 class="titulo">Buscador de Universidades</h1>
+
+        <div class="input-part">
+            <label for="NOMBRE">Nombre de la universidad (con tildes)</label>
+            <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Nombre de la universidad (con tildes)">
+        </div>
+
+        <div class="input-part">
+            <label for="TIPO_GESTION">Tipo de gestión</label>
+            <select name="TIPO_GESTION" id="TIPO_GESTION">
+                <option value="TIPO" disabled selected>Tipo de gestión</option>
+                <option value="PRIVADO">Privado</option>
+                <option value="PÚBLICO">Público</option>
+            </select>
+        </div>
     </form>
 </body>
 </html>
