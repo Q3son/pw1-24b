@@ -17,28 +17,28 @@ body {
 /* Estilo del formulario */
 .formulario {
     background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para destacar sobre la imagen */
-    width: 85%; /* Establece el ancho del formulario */
-    max-width: 1200px;
-    padding: 50px;
-    border-radius: 20px;
+    width: 90%; /* Ancho reducido */
+    max-width: 500px; /* Limitar el tamaño máximo */
+    padding: 30px;
+    border-radius: 15px;
     border: none;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6); /* Sombras más pronunciadas */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5); /* Sombras suaves */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(10px); /* Difumina el fondo detrás del formulario */
+    backdrop-filter: blur(8px); /* Difumina el fondo detrás del formulario */
 }
 
 /* Título estilizado */
 .titulo {
-    font-size: 2.2em; /* Título grande */
+    font-size: 1.8em; /* Tamaño adecuado */
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7); /* Sombra más suave */
-    margin-bottom: 30px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6); /* Sombra suave */
+    margin-bottom: 25px;
     text-align: center;
     letter-spacing: 2px;
     position: relative;
@@ -49,7 +49,7 @@ body {
 .input-part {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin-bottom: 20px;
     position: relative;
 }
@@ -58,14 +58,14 @@ body {
 .input-part input,
 .input-part select {
     width: 100%;
-    padding: 18px 20px;
-    border-radius: 10px;
+    padding: 16px 20px;
+    border-radius: 8px;
     border: 2px solid transparent;
     background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     font-weight: 500;
-    font-size: 1.1em;
-    margin-bottom: 15px;
+    font-size: 1em;
+    margin-bottom: 12px;
     transition: all 0.3s ease;
     box-sizing: border-box;
 }
@@ -97,11 +97,11 @@ body {
 
 /* Botón de búsqueda */
 .buscar {
-    width: 60%;
-    padding: 18px;
+    width: 100%;
+    padding: 16px;
     background: linear-gradient(135deg, #ff6b81, #ff3d5c);
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     color: white;
     font-weight: bold;
     font-size: 18px;
