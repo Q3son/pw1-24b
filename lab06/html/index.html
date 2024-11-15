@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario - Universidades</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Universidades Peruanas</title>
 </head>
 <body>
-    <form action="/cgi-bin/procesar_formulario.cgi" method="post">
-        <h1>Formulario de Universidades</h1>
+    <form class="formulario" action="/cgi-bin/busqueda.pl" method="get">
+        <h1 class="titulo">Buscador de Universidades Peruanas</h1>
+
+        <div class="input-part">
+            <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Nombre de la universidad (con tildes)">
+        </div>
+
+        <div class="input-part">
+            <select name="TIPO_GESTION" id="TIPO_GESTION">
+                <option value="TIPO" disabled selected >Tipo de gestion</option>
+                <option value="PRIVADO">Privado</option>
+                <option value="PÚBLICO">Publico</option>
+            </select>
+        </div>
+
+        <div class="input-part">
+            <select name="ESTADO_LICENCIAMIENTO" id="ESTADO_LICENCIAMIENTO">
+                <option value="ESTADO" disabled selected >Estado de licenciamiento</option>
+                <option value="LICENCIA OTORGADA">Licencia otorgada</option>
+                <option value="LICENCIA DENEGADA">Licencia denegada</option>
+                <option value="NO PRESENTADO">No presentado</option>
+            </select>
+        </div>
+
+        <div class="input-part">
+            <label>Fecha inicio</label>
+            <input type="date" name="FECHA_INICIO" id="FECHA_INICIO" >
+        </div>
+
+        <div class="input-part">
+            <label>Fecha fin</label>
+            <input type="date" name="FECHA_FIN" id="FECHA_FIN" >
+        </div>
+
+        <div class="input-part">
+            <input type="text" name="PERIODO_LICENCIAMIENTO" id="PERIODO_LICENCIAMIENTO" placeholder="Periodo de licenciamiento (años)">
+        </div>
 
         <!-- Selección de Departamento -->
-        <label for="departamento">Departamento:</label>
-        <select id="departamento" name="departamento">
+        <div class="input-part">
+            <select name="DEPARTAMENTO" id="DEPARTAMENTO">
             <option value="DEPARTAMENTO" disabled selected>Departamento</option>
             <option value="AMAZONAS">Amazonas</option>
             <option value="ÁNCASH">Áncash</option>
@@ -39,11 +75,12 @@
             <option value="TUMBES">Tumbes</option>
             <option value="UCAYALI">Ucayali</option>
         </select>
-        <br><br>
+    </div>
 
         <!-- Selección de Provincia -->
-        <label for="provincia">Provincia:</label>
-        <select id="provincia" name="provincia">
+ 
+        <div class="input-part">
+            <select name="PROVINCIA" id="PROVINCIA">
             <option value="PROVINCIA" disabled selected>Provincia</option>
             <option value="LIMA">Lima</option>
             <option value="HUAMANGA">Huamanga</option>
@@ -92,11 +129,11 @@
             <option value="UTCUBAMBA">Utcubamba</option>
             <option value="SULLANA">Sullana</option>
         </select>
-        <br><br>
+    </div>
 
         <!-- Selección de Distrito -->
-        <label for="distrito">Distrito:</label>
-        <select id="distrito" name="distrito">
+        <div class="input-part">
+            <select name="DISTRITO" id="DISTRITO">
             <option value="DISTRITO" disabled selected>Distrito</option>
             <!-- Agregar distritos aquí según corresponda -->
             <option value="LIMA">Lima</option>
@@ -176,9 +213,10 @@
             <option value="BAGUA GRANDE">Bagua Grande</option>
             <option value="SAN BORJA">San Borja</option>
         </select>
-        <br><br>
+    </div>
 
-        <input type="submit" value="Enviar">
-    </form>
+    <button class="buscar" type="submit">Buscar</button>
+
+</form>
 </body>
 </html>
