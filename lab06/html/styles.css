@@ -16,8 +16,8 @@ body {
 .formulario {
     background: rgba(0, 0, 0, 0.6); /* Fondo oscuro para contrastar con la imagen */
     width: 90%; /* Ocupa el 90% del ancho de la pantalla */
-    max-width: 900px; /* No se va a expandir más de 900px */
-    padding: 20px;
+    max-width: 1200px; /* Máximo tamaño más grande */
+    padding: 40px;
     border-radius: 15px;
     border: none;
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4);
@@ -34,7 +34,7 @@ body {
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.8em;
+    font-size: 2em; /* Título más grande */
     font-weight: 700;
     color: #ffffff;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
@@ -52,14 +52,14 @@ body {
 .input-part input,
 .input-part select {
     width: 100%;
-    padding: 12px;
+    padding: 18px; /* Aumento de tamaño del padding */
     border-radius: 10px;
     border: none;
     background: rgba(255, 255, 255, 0.3);
     color: #ffffff;
     font-weight: 500;
-    font-size: 1em;
-    margin-bottom: 10px; /* Espacio entre los inputs */
+    font-size: 1.1em; /* Aumento del tamaño de la fuente */
+    margin-bottom: 15px; /* Más espacio entre los inputs */
     transition: all 0.3s ease;
 }
 
@@ -77,13 +77,13 @@ body {
 .buscar {
     width: 30%;
     margin-top: 0;
-    padding: 14px;
+    padding: 16px; /* Aumento de tamaño del padding */
     background: linear-gradient(135deg, #ff6b81, #ff3d5c);
     border: none;
     border-radius: 10px;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px; /* Aumento del tamaño de la fuente */
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 label {
-    font-size: 14px;
+    font-size: 16px; /* Aumento de tamaño de la fuente */
     color: #ffffff;
     font-weight: bold;
     margin-bottom: 8px;
