@@ -10,8 +10,9 @@
     <form class="formulario" action="/cgi-bin/busqueda.pl" method="get">
         <h1 class="titulo">Buscador de Universidades</h1>
 
+        <!-- Filtros de búsqueda -->
         <div class="input-part">
-            <label for="NOMBRE">Nombre de la universidad (con tildes)</label>
+            <label for="NOMBRE">Nombre de la universidad</label>
             <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Nombre de la universidad (con tildes)">
         </div>
 
@@ -23,6 +24,27 @@
                 <option value="PÚBLICO">Público</option>
             </select>
         </div>
+
+        <div class="input-part">
+            <label for="ESTADO_LICENCIAMIENTO">Estado de licenciamiento</label>
+            <select name="ESTADO_LICENCIAMIENTO" id="ESTADO_LICENCIAMIENTO">
+                <option value="ESTADO" disabled selected>Estado de licenciamiento</option>
+                <option value="LICENCIA OTORGADA">Licencia otorgada</option>
+                <option value="LICENCIA DENEGADA">Licencia denegada</option>
+                <option value="NO PRESENTADO">No presentado</option>
+            </select>
+        </div>
+
+        <div class="input-part">
+            <label for="FECHA_INICIO">Fecha de inicio</label>
+            <input type="date" name="FECHA_INICIO" id="FECHA_INICIO">
+        </div>
+
+        <div class="input-part">
+            <label for="FECHA_FIN">Fecha de fin</label>
+            <input type="date" name="FECHA_FIN" id="FECHA_FIN">
+        </div>
     </form>
 </body>
 </html>
+
