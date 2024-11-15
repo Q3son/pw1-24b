@@ -16,7 +16,7 @@ body {
 
 /* Estilo del formulario */
 .formulario {
-    background: rgba(0, 0, 0, 0.75); /* Fondo más oscuro */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
     width: 100%;
     max-width: 400px; /* Tamaño máximo del formulario */
     padding: 30px 20px; /* Más espacio dentro del formulario */
