@@ -1,128 +1,117 @@
-/* Estilo global */
 body {  
-    font-family: 'Arial', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;  
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background: url('fondoU.jpg') no-repeat center center fixed;
+    justify-content: flex-start;
     background-size: cover;
-    color: #ffffff;
-    overflow-x: hidden;
+    background-position: center;
+    overflow-y: auto;
+    padding-top: 50px;
+    background-image: url('fondoU.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Estilo del formulario */
 .formulario {
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    width: 100%;
-    max-width: 480px; /* Ajusta el tamaño del formulario */
-    padding: 40px 30px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6); /* Sombra suave */
+    background: rgb(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 24px;
+    border-radius: 16px;
+    border: solid 5px rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    box-shadow: 0px 0px 30px 20px rgb(0, 0, 0, 0.1);
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    backdrop-filter: blur(10px); /* Difumina el fondo */
-    overflow: hidden;
+    margin-bottom: 50px;
 }
 
-/* Título estilizado */
 .titulo {
-    font-size: 2em; /* Título más grande */
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Contenedor de inputs */
 .input-part {
     display: flex;
-    flex-direction: column;
     width: 100%;
-    margin-bottom: 25px;
+    position: relative;
+    margin-top: 20px;
 }
 
-/* Estilo de los inputs */
-.input-part input,
-.input-part select {
+.input-part input {
     width: 100%;
-    padding: 14px 18px;
-    border-radius: 8px;
-    border: 2px solid transparent;
-    background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
-    color: #ffffff;
-    font-size: 1em;
-    font-weight: 500;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
-}
-
-/* Efecto de focus en los inputs */
-.input-part input:focus,
-.input-part select:focus {
-    background: rgba(255, 255, 255, 0.4);
-    border: 2px solid #ff6b81;
+    padding: 10px 16px 10px 38px;
+    border-radius: 90px;
+    border: solid 3px transparent;
+    background: rgb(255, 255, 255, 0.1);
     outline: none;
+    caret-color: white;
+    color: white;
+    font-weight: 500;
 }
 
-/* Placeholder más claro */
+.input-part input:focus {
+    border: solid rgb(255, 255, 255, 0.25);
+}
+
 .input-part input::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.75);
 }
 
-/* Estilo de select */
-.input-part select {
-    appearance: none;
-    background: rgba(255, 255, 255, 0.2);
+.input-part :hover {
+    border: solid 3px rgba(255, 255, 255, 0.25);
 }
 
-/* Estilo de las opciones del select */
-.input-part select option {
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-}
-
-/* Botón de búsqueda */
 .buscar {
     width: 100%;
-    padding: 16px;
-    background: linear-gradient(135deg, #ff6b81, #ff3d5c);
+    margin-top: 24px;
+    padding: 10px;
+    background: #5758588a;
     border: none;
-    border-radius: 10px;
+    border-radius: 90px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
-    margin-top: 15px;
+    outline: transparent 3px solid;
 }
 
-/* Efecto de hover en el botón */
-.buscar:hover {
-    transform: translateY(-5px);
-    background: linear-gradient(135deg, #ff3d5c, #ff6b81);
-}
-
-/* Efecto de foco en el botón */
 .buscar:focus {
-    outline: none;
-    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+    outline: #a0a3a38a;
 }
 
-/* Etiquetas */
 label {
-    font-size: 16px;
-    color: #ffffff;
+    font-size: 13px;
+    color: white;
     font-weight: bold;
-    margin-bottom: 8px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.input-part select {
+    width: 100%;
+    padding: 10px 16px 10px 38px;
+    border-radius: 90px;
+    border: solid 3px transparent;
+    background: rgb(255, 255, 255, 0.1);
+    outline: none;
+    color: white;
+    font-weight: 500;
+    appearance: none;
+}
+
+.input-part select option {
+    background: #8587888a;
+    color: white;
+}
+
+.input-part select option:first-child {
+    background: rgba(255, 255, 255, 0.75);
+    color: rgba(100, 100, 100, 1);
 }
