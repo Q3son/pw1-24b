@@ -18,8 +18,8 @@ body {
 .formulario {
     background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
     width: 100%;
-    max-width: 400px; /* Reducir el tamaño del formulario */
-    padding: 20px 15px; /* Reducir el padding */
+    max-width: 350px; /* Reducir aún más el tamaño del formulario */
+    padding: 15px 10px; /* Reducir el padding */
     border-radius: 10px; /* Esquinas redondeadas */
     border: none;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7); /* Sombra más suave */
@@ -35,13 +35,13 @@ body {
 
 /* Título estilizado */
 .titulo {
-    font-size: 1.8em; /* Reducir el tamaño del título */
+    font-size: 1.6em; /* Reducir el tamaño del título */
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reducir el margen */
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -50,23 +50,22 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reducir el margen entre los contenedores */
 }
 
 /* Estilo de los inputs */
 .input-part input,
 .input-part select {
     width: 100%;
-    padding: 12px 14px; /* Reducir el padding */
-    border-radius: 10px;
+    padding: 10px 12px; /* Reducir el padding */
+    border-radius: 8px; /* Esquinas redondeadas */
     border: 2px solid transparent;
     background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
     color: #ffffff;
-    font-size: 0.9em; /* Reducir el tamaño de la fuente */
+    font-size: 0.85em; /* Reducir tamaño de la fuente */
     font-weight: 500;
-    margin-bottom: 10px; /* Reducir el margen entre inputs */
+    margin-bottom: 8px; /* Reducir el margen entre inputs */
     transition: all 0.3s ease;
-    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra interna */
 }
 
 /* Efecto de focus en los inputs */
@@ -98,16 +97,16 @@ body {
 /* Botón de búsqueda */
 .buscar {
     width: 100%;
-    padding: 14px; /* Reducir el padding */
+    padding: 12px; /* Reducir el padding */
     background: linear-gradient(135deg, #ff6b81, #ff3d5c);
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     color: white;
     font-weight: bold;
-    font-size: 16px; /* Reducir el tamaño de la fuente */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
-    margin-top: 15px;
+    margin-top: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en el botón */
 }
 
