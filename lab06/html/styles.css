@@ -18,31 +18,31 @@ body {
 .formulario {
     background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
     width: 100%;
-    max-width: 350px; /* Reducir aún más el tamaño del formulario */
-    padding: 15px 10px; /* Reducir el padding */
-    border-radius: 10px; /* Esquinas redondeadas */
+    max-width: 400px; /* Aumentar el tamaño máximo del formulario */
+    padding: 30px 20px; /* Aumentar el padding para más espacio dentro */
+    border-radius: 12px; /* Esquinas más redondeadas */
     border: none;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7); /* Sombra más suave */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    backdrop-filter: blur(8px); /* Difumina el fondo */
+    backdrop-filter: blur(10px); /* Mantener el fondo difuso */
     overflow: hidden;
     box-sizing: border-box;
-    margin: 0 10px; /* Reducir el margen */
+    margin: 0 15px; /* Aumentar el margen alrededor */
 }
 
 /* Título estilizado */
 .titulo {
-    font-size: 1.6em; /* Reducir el tamaño del título */
+    font-size: 1.7em; /* Mantener el título adecuado */
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 15px; /* Reducir el margen */
+    margin-bottom: 20px; /* Aumentar el espacio debajo del título */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Contenedor de inputs */
@@ -50,21 +50,21 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 15px; /* Reducir el margen entre los contenedores */
+    margin-bottom: 20px; /* Aumentar el espacio entre los campos */
 }
 
 /* Estilo de los inputs */
 .input-part input,
 .input-part select {
     width: 100%;
-    padding: 10px 12px; /* Reducir el padding */
+    padding: 12px 15px; /* Aumentar padding para los inputs */
     border-radius: 8px; /* Esquinas redondeadas */
     border: 2px solid transparent;
     background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
     color: #ffffff;
-    font-size: 0.85em; /* Reducir tamaño de la fuente */
+    font-size: 0.9em; /* Mantener un tamaño de fuente pequeño pero legible */
     font-weight: 500;
-    margin-bottom: 8px; /* Reducir el margen entre inputs */
+    margin-bottom: 10px; /* Espacio adicional entre los inputs */
     transition: all 0.3s ease;
 }
 
@@ -97,17 +97,17 @@ body {
 /* Botón de búsqueda */
 .buscar {
     width: 100%;
-    padding: 12px; /* Reducir el padding */
+    padding: 14px; /* Aumentar padding en el botón */
     background: linear-gradient(135deg, #ff6b81, #ff3d5c);
     border: none;
     border-radius: 10px;
     color: white;
     font-weight: bold;
-    font-size: 14px; /* Reducir el tamaño de la fuente */
+    font-size: 16px; /* Aumentar un poco el tamaño de la fuente */
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
-    margin-top: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en el botón */
+    margin-top: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más suave */
 }
 
 /* Efecto de hover en el botón */
@@ -127,6 +127,6 @@ label {
     font-size: 14px; /* Reducir tamaño de las etiquetas */
     color: #ffffff;
     font-weight: bold;
-    margin-bottom: 6px; /* Reducir el margen entre etiquetas e inputs */
+    margin-bottom: 8px; /* Espacio entre etiquetas e inputs */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
