@@ -18,31 +18,31 @@ body {
 .formulario {
     background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
     width: 100%;
-    max-width: 480px; /* Tamaño máximo del formulario */
-    padding: 30px 20px;
-    border-radius: 15px; /* Esquinas redondeadas */
+    max-width: 400px; /* Reducir el tamaño del formulario */
+    padding: 20px 15px; /* Reducir el padding */
+    border-radius: 10px; /* Esquinas redondeadas */
     border: none;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.7); /* Sombra suave */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7); /* Sombra más suave */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    backdrop-filter: blur(10px); /* Difumina el fondo */
+    backdrop-filter: blur(8px); /* Difumina el fondo */
     overflow: hidden;
     box-sizing: border-box;
-    margin: 0 20px; /* Añadido para que se ajuste al contenedor */
+    margin: 0 10px; /* Reducir el margen */
 }
 
 /* Título estilizado */
 .titulo {
-    font-size: 2.2em; /* Título ajustado */
+    font-size: 1.8em; /* Reducir el tamaño del título */
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Contenedor de inputs */
@@ -57,14 +57,14 @@ body {
 .input-part input,
 .input-part select {
     width: 100%;
-    padding: 14px 18px;
-    border-radius: 12px;
+    padding: 12px 14px; /* Reducir el padding */
+    border-radius: 10px;
     border: 2px solid transparent;
     background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
     color: #ffffff;
-    font-size: 1em;
+    font-size: 0.9em; /* Reducir el tamaño de la fuente */
     font-weight: 500;
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* Reducir el margen entre inputs */
     transition: all 0.3s ease;
     box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra interna */
 }
@@ -98,36 +98,36 @@ body {
 /* Botón de búsqueda */
 .buscar {
     width: 100%;
-    padding: 16px;
+    padding: 14px; /* Reducir el padding */
     background: linear-gradient(135deg, #ff6b81, #ff3d5c);
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px; /* Reducir el tamaño de la fuente */
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
-    margin-top: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra en el botón */
+    margin-top: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en el botón */
 }
 
 /* Efecto de hover en el botón */
 .buscar:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     background: linear-gradient(135deg, #ff3d5c, #ff6b81);
 }
 
 /* Efecto de foco en el botón */
 .buscar:focus {
     outline: none;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
 }
 
 /* Etiquetas */
 label {
-    font-size: 18px;
+    font-size: 14px; /* Reducir tamaño de las etiquetas */
     color: #ffffff;
     font-weight: bold;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 6px; /* Reducir el margen entre etiquetas e inputs */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
