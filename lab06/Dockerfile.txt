@@ -29,3 +29,10 @@ COPY ./html/fondoU.jpg /var/www/html/
 # Sección 5: Dar permisos de ejecución a los scripts CGI
 RUN chmod +x /usr/lib/cgi-bin/busqueda.pl && \
     chmod 644 /usr/lib/cgi-bin/Universidades_Lab06.csv}
+# Sección 6: Configuración del directorio CGI en Apache
+RUN echo "<Directory /usr/lib/cgi-bin>\n\
+    AllowOverride None\n\
+    Options +ExecCGI\n\
+    AddHandler cgi-script .pl\n\
+    Require all granted\n\
+</Directory>" >> /etc/apache2/apache2.conf
