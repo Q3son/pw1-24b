@@ -36,3 +36,8 @@ RUN echo "<Directory /usr/lib/cgi-bin>\n\
     AddHandler cgi-script .pl\n\
     Require all granted\n\
 </Directory>" >> /etc/apache2/apache2.conf
+# Sección 7: Exponer los puertos necesarios
+EXPOSE 80 22
+
+# Sección 8: Comando de inicio (Apache y SSH)
+CMD ["bash", "-c", "service ssh start && apachectl -D FOREGROUND"]
