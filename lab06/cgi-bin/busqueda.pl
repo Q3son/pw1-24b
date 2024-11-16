@@ -24,6 +24,17 @@ my $Tabla_de_Universidades = Text::CSV->new({ sep_char => ",", binary => 1, auto
 #Abre la hoja de calculo
 open(my $fh, '<:encoding(UTF-8)', 'Universidades_LAB06.csv') or die "El archivo no se pudo abrir: $!";
 
+#Convierte la fecha elegida en el html para poder usarlo en las tablas
+sub convertir_fecha {
+    my ($fecha) = @_;
+    $fecha =~ s/-//g; #Reemplaza los - por espacios vacios
+    return $fecha;
+}
+
+# Convierte fechas de búsqueda
+$fecha_inicio_licenciamiento = convertir_fecha_a_yyyymmdd($fecha_inicio_licenciamiento);
+$fecha_fin_licenciamiento = convertir_fecha_a_yyyymmdd($fecha_fin_licenciamiento);
+
 #crear ArrayList de universidades
 my @mis_universidades;
 
