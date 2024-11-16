@@ -1,2 +1,3 @@
 # Sección 1: Establecer la imagen base y la zona horaria
 FROM ubuntu:22.04
+
