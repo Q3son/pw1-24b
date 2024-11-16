@@ -26,3 +26,6 @@ COPY ./cgi-bin/Universidades_Lab06.csv /usr/lib/cgi-bin/
 COPY ./html/index.html /var/www/html/
 COPY ./html/styles.css /var/www/html/
 COPY ./html/fondoU.jpg /var/www/html/
+# Sección 5: Dar permisos de ejecución a los scripts CGI
+RUN chmod +x /usr/lib/cgi-bin/busqueda.pl && \
+    chmod 644 /usr/lib/cgi-bin/Universidades_Lab06.csv}
