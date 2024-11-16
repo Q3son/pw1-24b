@@ -20,3 +20,9 @@ RUN apt-get install -y \
 # Sección 3: Activar módulos CGI y Perl en Apache
 RUN a2enmod cgi && \
     a2enmod perl
+# Sección 4: Copiar los archivos del proyecto al directorio adecuado
+COPY ./cgi-bin/busqueda.pl /usr/lib/cgi-bin/
+COPY ./cgi-bin/Universidades_Lab06.csv /usr/lib/cgi-bin/
+COPY ./html/index.html /var/www/html/
+COPY ./html/styles.css /var/www/html/
+COPY ./html/fondoU.jpg /var/www/html/
