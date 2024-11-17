@@ -164,6 +164,15 @@
   ![image](https://github.com/user-attachments/assets/07b7c2fe-e2c9-4f50-bfb8-4c65fa144b07)
   ![image](https://github.com/user-attachments/assets/4866efdc-da51-46ce-849c-325e8b745ab4)
   ![image](https://github.com/user-attachments/assets/7df0bdfe-b4f0-40d9-83e3-2bd247446e18)
+- Exponemos los puertos 80 y 22 para HTTP y SSH, respectivamente, y configuramos el comando de inicio para activar el servicio SSH y ejecutar Apache en primer plano.
+  ![image](https://github.com/user-attachments/assets/3263af1a-03fa-4a65-a860-a7a2cda454ba)
+- El script filtra datos de un archivo CSV de universidades según criterios ingresados, como nombre, gestión, estado, fechas y ubicación, y muestra los resultados en HTML.
+  ![image](https://github.com/user-attachments/assets/079f037f-6007-419f-8c32-bd7374ed4704)
+  ![image](https://github.com/user-attachments/assets/07494f76-1336-4808-886b-295c34ff5bf6)
+- Realizamos ajustes en las referencias al archivo .csv, cambiando el uso de mayúsculas a minúsculas para asegurar su correcta identificación por el programa.
+  ![image](https://github.com/user-attachments/assets/9053ede5-ce1f-49f0-8a67-691b51974688)
+- Añadimos el archivo ReadmeExecutable.txt a la carpeta lab06, donde describimos los pasos para construir y ejecutar el proyecto en Docker
+  ![image](https://github.com/user-attachments/assets/f925d5cc-979e-42e4-9fc4-18425cf19477)
 
 
 ## CUESTIONARIO
