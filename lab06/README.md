@@ -106,10 +106,15 @@
 
 # COMMITS
 - Comenzamos extrayendo los datos de las universidades y organizándolos en un archivo .csv con información clave como ubicación, tipo de gestión y estado de licenciamiento. Luego, revisamos la consistencia de los datos antes de subirlos al repositorio grupal.
-- ![image](https://github.com/user-attachments/assets/358c0a86-d7b8-47f7-82e2-9d31f6303c5f)
+  ![image](https://github.com/user-attachments/assets/358c0a86-d7b8-47f7-82e2-9d31f6303c5f)
 - Definimos un script en Perl para configurar los criterios de búsqueda de universidades, asegurándonos de manejar correctamente caracteres en UTF-8.
-- ![image](https://github.com/user-attachments/assets/b5ab62c2-6af7-45b5-ae42-0abaabcf1e68)
-
+  ![image](https://github.com/user-attachments/assets/b5ab62c2-6af7-45b5-ae42-0abaabcf1e68)
+- Preparamos una página web básica en HTML para el buscador de universidades, asegurando compatibilidad con dispositivos móviles.
+- Incorporamos un formulario inicial que conecta con un script Perl para procesar búsquedas y vinculamos un archivo CSS externo para personalizar la apariencia.
+  ![image](https://github.com/user-attachments/assets/cf2bdc79-6921-4161-8725-ab2d9958c9e6)
+- Agregamos campos para el nombre de la universidad con tildes y un selector para el tipo de gestión (público o privado) en el formulario.
+  ![image](https://github.com/user-attachments/assets/808b9dec-f61f-4aa4-9c2b-ef840ee40b77)
+- 
 
 
 ## CUESTIONARIO
