@@ -114,8 +114,53 @@
   ![image](https://github.com/user-attachments/assets/cf2bdc79-6921-4161-8725-ab2d9958c9e6)
 - Agregamos campos para el nombre de la universidad con tildes y un selector para el tipo de gestión (público o privado) en el formulario.
   ![image](https://github.com/user-attachments/assets/808b9dec-f61f-4aa4-9c2b-ef840ee40b77)
+- Incluimos nuevos campos en el formulario, como el estado de licenciamiento con varias opciones y fechas de inicio y fin para acotar las búsquedas.
+  ![image](https://github.com/user-attachments/assets/15afd345-8d92-4106-a5ed-06ae5390563a)
+- Añadimos campos para ingresar el periodo de licenciamiento en años y un selector para departamentos como Lima, Arequipa y Cusco. También incorporamos un botón para enviar las búsquedas.
+  ![image](https://github.com/user-attachments/assets/416d7f56-de65-478f-944a-3532424d0910)
+- Organizamos el formulario para incluir filtros clave como el nombre de la universidad, tipo de gestión, estado de licenciamiento y rangos de fechas. Añadimos listas desplegables con departamentos, provincias y distritos del Perú.
+  ![image](https://github.com/user-attachments/assets/2e859112-0f69-48f6-ba8a-ed99b0a598f8)
+  ![image](https://github.com/user-attachments/assets/b33dd0db-f59d-4544-bc12-eec7eb40f2b8)
+- Reestructuramos el formulario para incluir campos clave como nombre, tipo de gestión, estado de licenciamiento, periodo, y fechas.
+  ![image](https://github.com/user-attachments/assets/b6b930e4-b2c0-43d4-b5b0-c1440d456b8a)
+- Comenzamos a editar el Css y comenzams con una base sencilla
+  ![image](https://github.com/user-attachments/assets/cdc6608c-243a-4703-abb1-d7117fbd6845)
+- Mejoramos el diseño con fondo degradado e imagen fija, transparencias en el formulario, sombras sutiles y ajustes en texto para mayor legibilidad y contraste.
+  ![image](https://github.com/user-attachments/assets/273f46ec-8715-4d7f-b546-d6cca7084e77)
+  ![image](https://github.com/user-attachments/assets/a777f54a-7c22-474f-84de-0c2d044b2118)
+- Optimizamos el diseño con un formulario centrado, fondo oscuro, bordes redondeados y efectos de transición. Ajustamos el ancho dinámico para adaptabilidad
+  ![image](https://github.com/user-attachments/assets/889ac8a4-bc1a-4655-b040-05dee640f43b)
+- Ampliamos el diseño del formulario con un ancho máximo mayor y mayor padding para comodidad visual. Aumentamos el tamaño de las fuentes en títulos, campos y etiquetas, y ajustamos los márgenes para una distribución más limpia.
+  ![image](https://github.com/user-attachments/assets/f0661858-0498-4aa6-bddb-7b3559bf03e3)
+- Modificaciones en el formulario con un fondo semi-transparente y bordes redondeados, ajustando el ancho máximo y las sombras para un diseño más limpio. Redimensionamos los títulos, inputs, y botones para mayor legibilidad y proporción. 
+  ![image](https://github.com/user-attachments/assets/a772e664-ccc0-4a74-94be-21e9b187ca4c)
+- Quitamos y modificamos varias lineas de codigo en el archivo Css, para que tenga una mejor vista y las modificaciones se acomoden mejor.
+  ![image](https://github.com/user-attachments/assets/07608f17-a389-4f7c-8c99-27229660b940)
+- Ultimas modificaciones del diseño con un fondo translúcido oscuro, bordes redondeados y sombras suaves para el formulario. Ajustamos los inputs, selects y botones con efectos de enfoque y hover, mejorando el contraste y la legibilidad.
+  ![image](https://github.com/user-attachments/assets/471946ae-e4d1-4bd3-8f10-252e7aaab517)
+  ![image](https://github.com/user-attachments/assets/0538b8f5-97f2-4ece-bc97-f91c502d9be6)
+- Con estas últimas modificaciones, tenemos casi listo el archivo CSS. Si surgiera alguna modificación adicional, será para pequeños ajustes o mejoras específicas.
+  ![image](https://github.com/user-attachments/assets/ac4c49b3-780d-40f3-b2c1-499d077248f9)
+  ![image](https://github.com/user-attachments/assets/ab93bec5-57eb-43b6-ba01-c5361766696e)
+  ![image](https://github.com/user-attachments/assets/4df4b107-2bf2-4ea4-81c4-865641e56275)
+- El script procesa datos enviados vía CGI, configurando UTF-8 para caracteres especiales. Decodifica parámetros del formulario y genera una respuesta HTML con la información ingresada
+  ![image](https://github.com/user-attachments/assets/46c0d7e1-01d1-42c6-808d-7bf8371a8aec)
+- Sincronizamos las actualizaciones y aseguramos que el proyecto esté al día con los últimos ajustes.
+  ![image](https://github.com/user-attachments/assets/f65eabf0-0104-4c35-9c5b-2392c0c02cb0)
+  ![image](https://github.com/user-attachments/assets/cac4b743-aa3c-4ceb-b74a-aea75c460641)
+- Este script en Perl utiliza Text::CSV para leer y procesar un archivo CSV con información de universidades. Permite recibir parámetros vía CGI desde un formulario y genera una respuesta HTML mostrando los datos filtrados
+  ![image](https://github.com/user-attachments/assets/13a82599-62f0-4a44-9f92-0e5ae0a18549)
+- Esta modificación incluye una función para convertir fechas de búsqueda al formato yyyymmdd, facilitando la comparación con los datos en la tabla, y prepara un array para almacenar las universidades procesadas.
+  ![image](https://github.com/user-attachments/assets/ee72969b-b05d-4133-8b62-228556e7708d)
+- Comenzamos con el Dockerfile definiendo la imagen base de Ubuntu 22.04, que servirá como punto de partida para configurar el entorno necesario.
+  ![image](https://github.com/user-attachments/assets/c66b04c4-1649-4c87-9c48-de12f229bfe8)
+- Como primera modificación del Dockerfile, establecemos la zona horaria a UTC. Se utiliza el comando RUN para instalar y configurar el paquete tzdata, asegurando que el entorno del contenedor esté sincronizado con la zona horaria correcta.
+  ![image](https://github.com/user-attachments/assets/ef1a049c-5997-4a04-9f99-47588af8ad52)
+- Continuamos con la instalación de Apache, Perl y otros paquetes esenciales para el proyecto. Se incluyen libapache2-mod-perl2 para la integración de Perl con Apache, junto con herramientas como curl, vim y libcgi-pm-perl para el manejo de scripts CGI. 
+  ![image](https://github.com/user-attachments/assets/272037f6-5315-47fe-ae50-15e8eefa5c03)
+- Habilitamos los módulos CGI y Perl en Apache utilizando a2enmod. Esto asegura que el servidor Apache pueda procesar scripts CGI y ejecutar aplicaciones en Perl.
+  ![image](https://github.com/user-attachments/assets/0e7bc2e8-dd8e-4e2d-bcba-778bd99dfd6f)
 - 
-
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
