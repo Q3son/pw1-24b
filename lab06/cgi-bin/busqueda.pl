@@ -72,6 +72,7 @@ while (my $row = $Tabla_de_Universidades->getline($fh)) {
 }
 
 # Imprimir los resultados de la búsqueda
+<<<<<<< HEAD
 print<<HTML;
 <!DOCTYPE html>
 <html lang="es">
@@ -377,3 +378,17 @@ body {
 </html>
 HTML
 close($fh);
+=======
+if (@universidades_encontradas) {
+    print "<h2>Resultados de la búsqueda:</h2>";
+    print "<ul>";
+    foreach my $universidad (@universidades_encontradas) {
+        print "<li><strong>Universidad:</strong> $universidad->{nombre}, <strong>Tipo:</strong> $universidad->{tipo}, <strong>Estado:</strong> $universidad->{estado}, <strong>Fecha inicio:</strong> $universidad->{fecha_inicio}, <strong>Fecha fin:</strong> $universidad->{fecha_fin}, <strong>Periodo:</strong> $universidad->{periodo}, <strong>Departamento:</strong> $universidad->{departamento}, <strong>Provincia:</strong> $universidad->{provincia}, <strong>Distrito:</strong> $universidad->{distrito}</li>";
+    }
+    print "</ul>";
+} else {
+    print "<p>No se encontraron universidades que coincidan con los criterios.</p>";
+}
+
+close($fh);
+>>>>>>> 2633ed6135bef80f74cca98be07d7507addbfc6c

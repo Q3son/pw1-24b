@@ -1,0 +1,45 @@
+# Sección 1: Establecer la imagen base y la zona horaria
+FROM ubuntu:22.04
+# Establecer zona horaria a UTC
+ENV DEBIAN_FRONTEND=noninteractive
+RUN ln -fs /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
+    apt-get update && \
+    apt-get install -y tzdata && \
+    dpkg-reconfigure --frontend noninteractive tzdata
+# Sección 2: Instalación de Apache, Perl y otros paquetes
+RUN apt-get install -y \
+    apache2 \
+    libapache2-mod-perl2 \
+    perl \
+    curl \
+    vim \
+    libcgi-pm-perl \
+    cpanminus \
+    openssh-server && \
+    cpanm Text::CSV && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+# Sección 3: Activar módulos CGI y Perl en Apache
+RUN a2enmod cgi && \
+    a2enmod perl
+# Sección 4: Copiar los archivos del proyecto al directorio adecuado
+COPY ./cgi-bin/busqueda.pl /usr/lib/cgi-bin/
+COPY ./cgi-bin/Universidades_Lab06.csv /usr/lib/cgi-bin/
+COPY ./html/index.html /var/www/html/
+COPY ./html/styles.css /var/www/html/
+COPY ./html/fondoU.jpg /var/www/html/
+# Sección 5: Dar permisos de ejecución a los scripts CGI
+RUN chmod +x /usr/lib/cgi-bin/busqueda.pl && \
+    chmod 644 /usr/lib/cgi-bin/Universidades_Lab06.csv
+# Sección 6: Configuración del directorio CGI en Apache
+RUN echo "<Directory /usr/lib/cgi-bin>\n\
+    AllowOverride None\n\
+    Options +ExecCGI\n\
+    AddHandler cgi-script .pl\n\
+    Require all granted\n\
+</Directory>" >> /etc/apache2/apache2.conf
+# Sección 7: Exponer los puertos necesarios
+EXPOSE 80 22
+
+# Sección 8: Comando de inicio (Apache y SSH)
+CMD ["bash", "-c", "service ssh start && apachectl -D FOREGROUND"]
