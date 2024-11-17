@@ -121,7 +121,12 @@
 - Organizamos el formulario para incluir filtros clave como el nombre de la universidad, tipo de gestión, estado de licenciamiento y rangos de fechas. Añadimos listas desplegables con departamentos, provincias y distritos del Perú.
 - ![image](https://github.com/user-attachments/assets/2e859112-0f69-48f6-ba8a-ed99b0a598f8)
 - ![image](https://github.com/user-attachments/assets/b33dd0db-f59d-4544-bc12-eec7eb40f2b8)
-- 
+- Reestructuramos el formulario para incluir campos clave como nombre, tipo de gestión, estado de licenciamiento, periodo, y fechas.
+- ![image](https://github.com/user-attachments/assets/b6b930e4-b2c0-43d4-b5b0-c1440d456b8a)
+- Comenzamos a editar el Css y comenzams con una base sencilla
+- ![image](https://github.com/user-attachments/assets/cdc6608c-243a-4703-abb1-d7117fbd6845)
+
+
 
 
 
