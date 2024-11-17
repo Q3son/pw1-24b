@@ -1,12 +1,17 @@
-# Sección 1: Establecer la imagen base y la zona horaria
-FROM ubuntu:22.04
-# Establecer zona horaria a UTC
-ENV DEBIAN_FRONTEND=noninteractive
-RUN ln -fs /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
-    apt-get update && \
-    apt-get install -y tzdata && \
-    dpkg-reconfigure --frontend noninteractive tzdata
-# Sección 2: Instalación de Apache, Perl y otros paquetes
+FROM bitnami/minideb
+
+ENV DEBIAN_FRONTEND="noninteractive" 
+
+RUN apt-get update
+RUN apt-get install -y apache2
+RUN apt-get install -y perl
+RUN apt-get install -y openssh-server
+RUN apt -y install systemctl
+RUN apt -y install vim
+RUN apt -y install bash
+RUN apt-get install -y locales
+RUN apt-get install -y tree
+RUN apt-get install -y libcgi-pm-perl
 RUN apt-get install -y \
     apache2 \
     libapache2-mod-perl2 \
@@ -19,27 +24,67 @@ RUN apt-get install -y \
     cpanm Text::CSV && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-# Sección 3: Activar módulos CGI y Perl en Apache
-RUN a2enmod cgi && \
-    a2enmod perl
-# Sección 4: Copiar los archivos del proyecto al directorio adecuado
-COPY ./cgi-bin/busqueda.pl /usr/lib/cgi-bin/
-COPY ./cgi-bin/Universidades_Lab06.csv /usr/lib/cgi-bin/
-COPY ./html/index.html /var/www/html/
-COPY ./html/styles.css /var/www/html/
-COPY ./html/fondoU.jpg /var/www/html/
-# Sección 5: Dar permisos de ejecución a los scripts CGI
-RUN chmod +x /usr/lib/cgi-bin/busqueda.pl && \
-    chmod 644 /usr/lib/cgi-bin/Universidades_Lab06.csv
-# Sección 6: Configuración del directorio CGI en Apache
-RUN echo "<Directory /usr/lib/cgi-bin>\n\
-    AllowOverride None\n\
-    Options +ExecCGI\n\
-    AddHandler cgi-script .pl\n\
-    Require all granted\n\
-</Directory>" >> /etc/apache2/apache2.conf
-# Sección 7: Exponer los puertos necesarios
-EXPOSE 80 22
 
-# Sección 8: Comando de inicio (Apache y SSH)
+RUN apt-get install -y locales
+
+RUN echo -e 'LANG=es_PE.UTF-8\nLC_ALL=es_PE.UTF-8' > /etc/default/locale
+
+RUN sed -i 's/^# *\(es_PE.UTF-8\)/\1/' /etc/locale.gen
+
+RUN /sbin/locale-gen es_PE.UTF-8
+
+RUN mkdir -p /home/pweb
+RUN useradd pweb -m && echo "pweb:12345678" | chpasswd
+RUN echo "root:12345678" | chpasswd
+RUN chown pweb:www-data /usr/lib/cgi-bin/
+RUN chown pweb:www-data /var/www/html/
+RUN chmod 755 /usr/lib/cgi-bin/
+RUN chmod 755 /var/www/html/
+
+RUN echo "export LC_ALL=es_PE.UTF-8" >> /home/pweb/.bashrc
+RUN echo "export LANG=es_PE.UTF-8" >> /home/pweb/.bashrc
+RUN echo "export LANGUAGE=es_PE.UTF-8" >> /home/pweb/.bashrc
+
+RUN ln -s /usr/lib/cgi-bin /home/pweb/cgi-bin
+RUN ln -s /var/www/html/ /home/pweb/html
+
+RUN ln -s /home/pweb /usr/lib/cgi-bin/toHOME
+RUN ln -s /home/pweb /var/www/html/toHOME
+
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
+
+RUN a2enmod cgid
+RUN service apache2 restart
+
+RUN systemctl enable ssh
+#RUN service ssh start
+
+COPY ./cgi-bin/busqueda.pl /usr/lib/cgi-bin
+COPY ./cgi-bin/Universidades_Lab06.csv /usr/lib/cgi-bin
+RUN chmod +x /usr/lib/cgi-bin/busqueda.pl
+RUN chmod +x /usr/lib/cgi-bin/Universidades_Lab06.csv
+
+COPY ./html/index.html /var/www/html
+COPY ./html/styles.css /var/www/html
+COPY ./html/fondoU.jpg /var/www/html
+
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+EXPOSE 80
+EXPOSE 22
+
+#CMD ["apachectl", "-D", "FOREGROUND"]
 CMD ["bash", "-c", "service ssh start && apachectl -D FOREGROUND"]
+
+# docker build -f dockerfile -t giovanni_mejia .
+# docker run -d -p 8195:80 -p 2202:22 --name mejia giovanni_mejia
+# docker stop mejia
+# docker start mejia
+# docker exec -it mejia /bin/bash
+# docker rm mejia
+# docker rmi giovanni_mejia
+
+# http://127.0.0.1:8195/
+
+# ssh -p 2202 pweb@127.0.0.1 -t bash
