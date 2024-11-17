@@ -185,6 +185,14 @@
 - Con esto, finalizamos la configuración del Dockerfile, dejando listo el entorno para ejecutar el proyecto con todas las dependencias y ajustes necesarios.
   ![image](https://github.com/user-attachments/assets/367aa56b-104b-4b46-ba45-e5079c82d656)
   ![image](https://github.com/user-attachments/assets/f99a7efd-e2b8-47fc-8fc9-8fd4b9bc85d5)
+- Con todo esto listo, pongamoslo en marcha. Aplicamos los comandos del archivo ReadExecutable.txt
+  ![image](https://github.com/user-attachments/assets/ff154d8e-0929-43d0-a92e-3e34c84ff4f3)
+  ![image](https://github.com/user-attachments/assets/50de0614-8bbe-40ce-b63c-2d11237de9db)
+- Aqui lo tenemos
+  ![image](https://github.com/user-attachments/assets/0e0df185-1df7-4f8a-bf43-b571da5140c0)
+- Colocamos los datos de nuestra universidad UNSA.
+  ![image](https://github.com/user-attachments/assets/2ad06c44-1310-4b65-a7f2-b39a20622924)
+
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
