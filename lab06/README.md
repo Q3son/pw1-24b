@@ -160,7 +160,11 @@
   ![image](https://github.com/user-attachments/assets/272037f6-5315-47fe-ae50-15e8eefa5c03)
 - Habilitamos los módulos CGI y Perl en Apache utilizando a2enmod. Esto asegura que el servidor Apache pueda procesar scripts CGI y ejecutar aplicaciones en Perl.
   ![image](https://github.com/user-attachments/assets/0e7bc2e8-dd8e-4e2d-bcba-778bd99dfd6f)
-- 
+- Copiamos los archivos del proyecto al contenedor, asignamos permisos a los scripts y configuramos el directorio CGI en Apache para ejecutar .pl
+  ![image](https://github.com/user-attachments/assets/07b7c2fe-e2c9-4f50-bfb8-4c65fa144b07)
+  ![image](https://github.com/user-attachments/assets/4866efdc-da51-46ce-849c-325e8b745ab4)
+  ![image](https://github.com/user-attachments/assets/7df0bdfe-b4f0-40d9-83e3-2bd247446e18)
+
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
