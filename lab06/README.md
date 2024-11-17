@@ -156,8 +156,11 @@
   ![image](https://github.com/user-attachments/assets/c66b04c4-1649-4c87-9c48-de12f229bfe8)
 - Como primera modificación del Dockerfile, establecemos la zona horaria a UTC. Se utiliza el comando RUN para instalar y configurar el paquete tzdata, asegurando que el entorno del contenedor esté sincronizado con la zona horaria correcta.
   ![image](https://github.com/user-attachments/assets/ef1a049c-5997-4a04-9f99-47588af8ad52)
-
-
+- Continuamos con la instalación de Apache, Perl y otros paquetes esenciales para el proyecto. Se incluyen libapache2-mod-perl2 para la integración de Perl con Apache, junto con herramientas como curl, vim y libcgi-pm-perl para el manejo de scripts CGI. 
+  ![image](https://github.com/user-attachments/assets/272037f6-5315-47fe-ae50-15e8eefa5c03)
+- Habilitamos los módulos CGI y Perl en Apache utilizando a2enmod. Esto asegura que el servidor Apache pueda procesar scripts CGI y ejecutar aplicaciones en Perl.
+  ![image](https://github.com/user-attachments/assets/0e7bc2e8-dd8e-4e2d-bcba-778bd99dfd6f)
+- 
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
