@@ -143,11 +143,15 @@
   ![image](https://github.com/user-attachments/assets/ac4c49b3-780d-40f3-b2c1-499d077248f9)
   ![image](https://github.com/user-attachments/assets/ab93bec5-57eb-43b6-ba01-c5361766696e)
   ![image](https://github.com/user-attachments/assets/4df4b107-2bf2-4ea4-81c4-865641e56275)
-- 
-
-
-
-
+- El script procesa datos enviados vía CGI, configurando UTF-8 para caracteres especiales. Decodifica parámetros del formulario y genera una respuesta HTML con la información ingresada
+  ![image](https://github.com/user-attachments/assets/46c0d7e1-01d1-42c6-808d-7bf8371a8aec)
+- Sincronizamos las actualizaciones y aseguramos que el proyecto esté al día con los últimos ajustes.
+  ![image](https://github.com/user-attachments/assets/f65eabf0-0104-4c35-9c5b-2392c0c02cb0)
+  ![image](https://github.com/user-attachments/assets/cac4b743-aa3c-4ceb-b74a-aea75c460641)
+- Este script en Perl utiliza Text::CSV para leer y procesar un archivo CSV con información de universidades. Permite recibir parámetros vía CGI desde un formulario y genera una respuesta HTML mostrando los datos filtrados
+  ![image](https://github.com/user-attachments/assets/13a82599-62f0-4a44-9f92-0e5ae0a18549)
+- Esta modificación incluye una función para convertir fechas de búsqueda al formato yyyymmdd, facilitando la comparación con los datos en la tabla, y prepara un array para almacenar las universidades procesadas.
+  ![image](https://github.com/user-attachments/assets/ee72969b-b05d-4133-8b62-228556e7708d)
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
