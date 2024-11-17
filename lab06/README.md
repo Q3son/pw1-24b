@@ -134,7 +134,16 @@
   ![image](https://github.com/user-attachments/assets/f0661858-0498-4aa6-bddb-7b3559bf03e3)
 - Modificaciones en el formulario con un fondo semi-transparente y bordes redondeados, ajustando el ancho máximo y las sombras para un diseño más limpio. Redimensionamos los títulos, inputs, y botones para mayor legibilidad y proporción. 
   ![image](https://github.com/user-attachments/assets/a772e664-ccc0-4a74-94be-21e9b187ca4c)
-
+- Quitamos y modificamos varias lineas de codigo en el archivo Css, para que tenga una mejor vista y las modificaciones se acomoden mejor.
+  ![image](https://github.com/user-attachments/assets/07608f17-a389-4f7c-8c99-27229660b940)
+- Ultimas modificaciones del diseño con un fondo translúcido oscuro, bordes redondeados y sombras suaves para el formulario. Ajustamos los inputs, selects y botones con efectos de enfoque y hover, mejorando el contraste y la legibilidad.
+  ![image](https://github.com/user-attachments/assets/471946ae-e4d1-4bd3-8f10-252e7aaab517)
+  ![image](https://github.com/user-attachments/assets/0538b8f5-97f2-4ece-bc97-f91c502d9be6)
+- Con estas últimas modificaciones, tenemos casi listo el archivo CSS. Si surgiera alguna modificación adicional, será para pequeños ajustes o mejoras específicas.
+  ![image](https://github.com/user-attachments/assets/ac4c49b3-780d-40f3-b2c1-499d077248f9)
+  ![image](https://github.com/user-attachments/assets/ab93bec5-57eb-43b6-ba01-c5361766696e)
+  ![image](https://github.com/user-attachments/assets/4df4b107-2bf2-4ea4-81c4-865641e56275)
+- 
 
 
 
