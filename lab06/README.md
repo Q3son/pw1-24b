@@ -173,6 +173,15 @@
   ![image](https://github.com/user-attachments/assets/9053ede5-ce1f-49f0-8a67-691b51974688)
 - Añadimos el archivo ReadmeExecutable.txt a la carpeta lab06, donde describimos los pasos para construir y ejecutar el proyecto en Docker
   ![image](https://github.com/user-attachments/assets/f925d5cc-979e-42e4-9fc4-18425cf19477)
+- El script procesa datos de un archivo CSV filtra universidades según los criterios ingresados, y presenta los resultados. Si hay múltiples coincidencias, las muestra en una tabla HTML. Si hay una única coincidencia, redirige a su ubicación en Google Maps.
+  ![image](https://github.com/user-attachments/assets/ad218f20-026e-4cdc-b075-c830e8f5a758)
+  ![image](https://github.com/user-attachments/assets/06fcaf44-e969-4c08-a14b-8263e8559430)
+- Cada entrada muestra detalles como nombre, tipo, estado, fechas, periodo y ubicación. Si no hay coincidencias, se informa al usuario con un mensaje claro. Finalmente, se cierra el archivo CSV utilizado
+  ![image](https://github.com/user-attachments/assets/f80480ef-082c-4738-b89e-90081956fd95)
+- Si hay una coincidencia, redirige a Google Maps con su ubicación. Para múltiples resultados, genera una tabla HTML detallada. Si no se encuentran coincidencias, muestra un mensaje informativo.
+  ![image](https://github.com/user-attachments/assets/fc104c37-6c5a-4dfb-a125-d243b5bc02f0)
+  ![image](https://github.com/user-attachments/assets/64078760-ea5a-4da0-abca-4c3a8703f44c)
+  ![image](https://github.com/user-attachments/assets/7186ee35-b944-4871-8893-2e6d172f9c7c)
 
 
 ## CUESTIONARIO
