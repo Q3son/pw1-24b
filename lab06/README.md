@@ -117,14 +117,23 @@
 - Incluimos nuevos campos en el formulario, como el estado de licenciamiento con varias opciones y fechas de inicio y fin para acotar las búsquedas.
   ![image](https://github.com/user-attachments/assets/15afd345-8d92-4106-a5ed-06ae5390563a)
 - Añadimos campos para ingresar el periodo de licenciamiento en años y un selector para departamentos como Lima, Arequipa y Cusco. También incorporamos un botón para enviar las búsquedas.
-- ![image](https://github.com/user-attachments/assets/416d7f56-de65-478f-944a-3532424d0910)
+  ![image](https://github.com/user-attachments/assets/416d7f56-de65-478f-944a-3532424d0910)
 - Organizamos el formulario para incluir filtros clave como el nombre de la universidad, tipo de gestión, estado de licenciamiento y rangos de fechas. Añadimos listas desplegables con departamentos, provincias y distritos del Perú.
-- ![image](https://github.com/user-attachments/assets/2e859112-0f69-48f6-ba8a-ed99b0a598f8)
-- ![image](https://github.com/user-attachments/assets/b33dd0db-f59d-4544-bc12-eec7eb40f2b8)
+  ![image](https://github.com/user-attachments/assets/2e859112-0f69-48f6-ba8a-ed99b0a598f8)
+  ![image](https://github.com/user-attachments/assets/b33dd0db-f59d-4544-bc12-eec7eb40f2b8)
 - Reestructuramos el formulario para incluir campos clave como nombre, tipo de gestión, estado de licenciamiento, periodo, y fechas.
-- ![image](https://github.com/user-attachments/assets/b6b930e4-b2c0-43d4-b5b0-c1440d456b8a)
+  ![image](https://github.com/user-attachments/assets/b6b930e4-b2c0-43d4-b5b0-c1440d456b8a)
 - Comenzamos a editar el Css y comenzams con una base sencilla
-- ![image](https://github.com/user-attachments/assets/cdc6608c-243a-4703-abb1-d7117fbd6845)
+  ![image](https://github.com/user-attachments/assets/cdc6608c-243a-4703-abb1-d7117fbd6845)
+- Mejoramos el diseño con fondo degradado e imagen fija, transparencias en el formulario, sombras sutiles y ajustes en texto para mayor legibilidad y contraste.
+  ![image](https://github.com/user-attachments/assets/273f46ec-8715-4d7f-b546-d6cca7084e77)
+  ![image](https://github.com/user-attachments/assets/a777f54a-7c22-474f-84de-0c2d044b2118)
+- Optimizamos el diseño con un formulario centrado, fondo oscuro, bordes redondeados y efectos de transición. Ajustamos el ancho dinámico para adaptabilidad
+  ![image](https://github.com/user-attachments/assets/889ac8a4-bc1a-4655-b040-05dee640f43b)
+- Ampliamos el diseño del formulario con un ancho máximo mayor y mayor padding para comodidad visual. Aumentamos el tamaño de las fuentes en títulos, campos y etiquetas, y ajustamos los márgenes para una distribución más limpia.
+  ![image](https://github.com/user-attachments/assets/f0661858-0498-4aa6-bddb-7b3559bf03e3)
+- Modificaciones en el formulario con un fondo semi-transparente y bordes redondeados, ajustando el ancho máximo y las sombras para un diseño más limpio. Redimensionamos los títulos, inputs, y botones para mayor legibilidad y proporción. 
+  ![image](https://github.com/user-attachments/assets/a772e664-ccc0-4a74-94be-21e9b187ca4c)
 
 
 
