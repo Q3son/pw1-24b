@@ -105,8 +105,11 @@
 - Se debe de trabajar con GIT - GITHUB
 
 # COMMITS
-- Primer commit
-- ![image](https://github.com/user-attachments/assets/3d5f79b4-2404-4372-a9d7-ac60b6b25598)
+- Comenzamos extrayendo los datos de las universidades y organizándolos en un archivo .csv con información clave como ubicación, tipo de gestión y estado de licenciamiento. Luego, revisamos la consistencia de los datos antes de subirlos al repositorio grupal.
+- ![image](https://github.com/user-attachments/assets/358c0a86-d7b8-47f7-82e2-9d31f6303c5f)
+- Definimos un script en Perl para configurar los criterios de búsqueda de universidades, asegurándonos de manejar correctamente caracteres en UTF-8.
+- ![image](https://github.com/user-attachments/assets/b5ab62c2-6af7-45b5-ae42-0abaabcf1e68)
+
 
 
 ## CUESTIONARIO
