@@ -182,7 +182,9 @@
   ![image](https://github.com/user-attachments/assets/fc104c37-6c5a-4dfb-a125-d243b5bc02f0)
   ![image](https://github.com/user-attachments/assets/64078760-ea5a-4da0-abca-4c3a8703f44c)
   ![image](https://github.com/user-attachments/assets/7186ee35-b944-4871-8893-2e6d172f9c7c)
-
+- Con esto, finalizamos la configuración del Dockerfile, dejando listo el entorno para ejecutar el proyecto con todas las dependencias y ajustes necesarios.
+  ![image](https://github.com/user-attachments/assets/367aa56b-104b-4b46-ba45-e5079c82d656)
+  ![image](https://github.com/user-attachments/assets/f99a7efd-e2b8-47fc-8fc9-8fd4b9bc85d5)
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
