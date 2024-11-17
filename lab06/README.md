@@ -152,6 +152,12 @@
   ![image](https://github.com/user-attachments/assets/13a82599-62f0-4a44-9f92-0e5ae0a18549)
 - Esta modificación incluye una función para convertir fechas de búsqueda al formato yyyymmdd, facilitando la comparación con los datos en la tabla, y prepara un array para almacenar las universidades procesadas.
   ![image](https://github.com/user-attachments/assets/ee72969b-b05d-4133-8b62-228556e7708d)
+- Comenzamos con el Dockerfile definiendo la imagen base de Ubuntu 22.04, que servirá como punto de partida para configurar el entorno necesario.
+  ![image](https://github.com/user-attachments/assets/c66b04c4-1649-4c87-9c48-de12f229bfe8)
+- Como primera modificación del Dockerfile, establecemos la zona horaria a UTC. Se utiliza el comando RUN para instalar y configurar el paquete tzdata, asegurando que el entorno del contenedor esté sincronizado con la zona horaria correcta.
+  ![image](https://github.com/user-attachments/assets/ef1a049c-5997-4a04-9f99-47588af8ad52)
+
+
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
