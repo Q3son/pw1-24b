@@ -17,7 +17,7 @@ my $cgi = CGI->new;
 my $Tabla_de_Universidades = Text::CSV->new({ sep_char => ",", binary => 1, auto_diag => 1 });
 
 # Abrir el archivo CSV
-open(my $fh, '<:encoding(UTF-8)', 'Universidades_LAB06.csv') or die "El archivo no se pudo abrir: $!";
+open(my $fh, '<:encoding(UTF-8)', 'Universidades_Lab06.csv') or die "El archivo no se pudo abrir: $!";
 
 # Convertir la fecha para que sea compatible con el formato de la base de datos
 sub convertir_fecha {

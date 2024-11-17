@@ -14,7 +14,9 @@ RUN apt-get install -y \
     curl \
     vim \
     libcgi-pm-perl \
+    cpanminus \
     openssh-server && \
+    cpanm Text::CSV && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 # Sección 3: Activar módulos CGI y Perl en Apache
