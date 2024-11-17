@@ -28,7 +28,7 @@ sub convertir_fecha {
 
 # Leer parámetros CGI
 my $nombre_universidad        = decode_utf8($cgi->param('NOMBRE') || '');
-my $tipo_gestion              = decode_utf8($cgi->param('TIPO_GESTION') || '');
+my $gestionamiento              = decode_utf8($cgi->param('TIPO_GESTION') || '');
 my $estado_licenciamiento     = decode_utf8($cgi->param('ESTADO_LICENCIAMIENTO') || '');
 my $inicio_licenciamiento     = decode_utf8($cgi->param('FECHA_INICIO') || '');
 my $fin_licenciamiento        = decode_utf8($cgi->param('FECHA_FIN') || '');
@@ -44,36 +44,28 @@ print $cgi->header(-type => 'text/html', -charset => 'UTF-8');
 my @universidades_encontradas;
 
 while (my $row = $Tabla_de_Universidades->getline($fh)) {
-    my ($nombre, $tipo, $estado, $fecha_inicio, $fecha_fin, $periodo, $departamento_csv, $provincia_csv, $distrito_csv) = @$row;
+    # Extraer las condiciones con UTF-8
+    my ($codigo, $universidades, $tipo, $estado, $inicio, $fin, $periodo, $dpto, $prov, $dist, $ubigeo, $latitud, $longitud, $fecha_corte) = @$row;
 
-    # Filtrar universidades por los criterios seleccionados
-    if (($nombre_universidad eq '' || $nombre =~ /$nombre_universidad/i) &&
-        ($tipo_gestion eq '' || $tipo =~ /$tipo_gestion/i) &&
-        ($estado_licenciamiento eq '' || $estado =~ /$estado_licenciamiento/i) &&
-        ($inicio_licenciamiento eq '' || convertir_fecha($fecha_inicio) >= convertir_fecha($inicio_licenciamiento)) &&
-        ($fin_licenciamiento eq '' || convertir_fecha($fecha_fin) <= convertir_fecha($fin_licenciamiento)) &&
-        ($periodo_licenciamiento eq '' || $periodo == $periodo_licenciamiento) &&
-        ($departamento eq '' || $departamento_csv eq $departamento) &&
-        ($provincia eq '' || $provincia_csv eq $provincia) &&
-        ($distrito eq '' || $distrito_csv eq $distrito)) {
+    # Se implementan filtros basados en los parámetros proporcionados por el usuario a través del formulario HTML.
+    if (($universidades =~ /\Q$nombre_universidad\E/i) && 
+        ($gestionamiento eq '' || $tipo =~ /\Q$gestionamiento\E/i) &&   
+        ($estado_licenciamiento eq '' || $estado =~ /\Q$estado_licenciamiento\E/i) && 
+        ($inicio_licenciamiento eq '' || $inicio =~ /\Q$inicio_licenciamiento\E/i) && 
+        ($fin_licenciamiento eq '' || $fin =~ /\Q$fin_licenciamiento\E/i) &&
+        ($periodo_licenciamiento eq '' || $periodo =~ /\Q$periodo_licenciamiento\E/i) &&  
+        ($departamento eq '' || $dpto =~ /\Q$departamento\E/i) &&   
+        ($provincia eq '' || $prov =~ /\Q$provincia\E/i) &&       
+        ($distrito eq '' || $dist =~ /\Q$distrito\E/i)) {
 
-        push @universidades_encontradas, {
-            nombre            => $nombre,
-            tipo              => $tipo,
-            estado            => $estado,
-            fecha_inicio      => $fecha_inicio,
-            fecha_fin         => $fecha_fin,
-            periodo           => $periodo,
-            departamento      => $departamento_csv,
-            provincia         => $provincia_csv,
-            distrito          => $distrito_csv,
-        };
+        # Si todos los filtros coinciden, agrega la fila actual (@$row) al arreglo @universidades
+        push(@universidades_encontradas, $row);
     }
 }
+close $fh;
 
 # Imprimir los resultados de la búsqueda
-<<<<<<< HEAD
-print<<HTML;
+print<< "FORM";
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -376,19 +368,139 @@ body {
     </form>
 </body>
 </html>
+FORM
+
+if (@universidades_encontradas == 1) {
+    # Si solo hay una universidad, redirigir a Google Maps con latitud y longitud
+    my $univ = $universidades_encontradas[0];
+    my ($codigo, $universidades, $tipo, $estado, $inicio, $fin, $periodo, $dpto, $prov, $dist, $ubigeo, 
+    $latitud, $longitud, $fecha_corte) = @$univ;
+
+print << "HTML";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+</head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Elementos en una columna */
+            align-items: center; /* Centrar horizontalmente */
+            justify-content: flex-start; /* Alinear hacia arriba */
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5; /* Fondo claro */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 16px;
+            background-color: white;
+	        margin-top: 20px;
+            padding: 30px;
+            border: 3px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Espacio entre el div y el iframe */
+        }
+
+        .fondo-unis {
+            background-color: white;
+	        margin-top: 20px;
+            padding: 30px;
+            border: 3px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Espacio entre el div y el iframe */
+        }
+
+        iframe {
+            border: 10px solid black;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 1000px; /* Limitar ancho máximo */
+            height: 450px;
+        }
+</style>
+<body>
+    <div class="fondo-unis">
+        <h2>$universidades</h2>
+    </div>
+    <iframe
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=$latitud,$longitud&hl=es;z=14&output=embed"
+	sandbox="allow-scripts allow-same-origin">
+    </iframe>
+</body>
+</html>
 HTML
-close($fh);
-=======
-if (@universidades_encontradas) {
-    print "<h2>Resultados de la búsqueda:</h2>";
-    print "<ul>";
-    foreach my $universidad (@universidades_encontradas) {
-        print "<li><strong>Universidad:</strong> $universidad->{nombre}, <strong>Tipo:</strong> $universidad->{tipo}, <strong>Estado:</strong> $universidad->{estado}, <strong>Fecha inicio:</strong> $universidad->{fecha_inicio}, <strong>Fecha fin:</strong> $universidad->{fecha_fin}, <strong>Periodo:</strong> $universidad->{periodo}, <strong>Departamento:</strong> $universidad->{departamento}, <strong>Provincia:</strong> $universidad->{provincia}, <strong>Distrito:</strong> $universidad->{distrito}</li>";
-    }
-    print "</ul>";
-} else {
-    print "<p>No se encontraron universidades que coincidan con los criterios.</p>";
+
+} elsif (@universidades_encontradas > 1){
+print << "FORM";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white; /* Establece el color del texto de toda la tabla */
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333; /* Fondo oscuro para las cabeceras */
+        }
+
+        td {
+            background-color: #555; /* Fondo oscuro para las celdas */
+        }
+
+        tr:nth-child(even) {
+            background-color: #444; /* Fondo más claro para las filas pares */
+        }
+    </style>
+    <title>Universidades Peruanas</title>
+</head>
+<body>
+    <h1>Resultados de Universidades</h1>
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+            <th>Inicio</th>
+            <th>Fin</th>
+            <th>Periodo</th>
+            <th>Departamento</th>
+            <th>Provincia</th>
+            <th>Distrito</th>
+        </tr>
+FORM
+
+foreach my $univ (@universidades_encontradas) {
+    my ($codigo, $universidades, $tipo, $estado, $inicio, $fin, $periodo, $dpto, $prov, $dist) = @$univ;
+    
+    # Imprimir los resultados en la tabla HTML
+    print "<tr><td>$codigo</td><td>$universidades</td><td>$tipo</td><td>$estado</td><td>$inicio</td><td>$fin</td><td>$periodo</td><td>$dpto</td><td>$prov</td><td>$dist</td></tr>";
 }
 
-close($fh);
->>>>>>> 2633ed6135bef80f74cca98be07d7507addbfc6c
+print "</table>";
+print end_html;
+} else {
+    print "No se encontraron universidades que coincidan con los criterios.";
+}
