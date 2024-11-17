@@ -114,7 +114,16 @@
   ![image](https://github.com/user-attachments/assets/cf2bdc79-6921-4161-8725-ab2d9958c9e6)
 - Agregamos campos para el nombre de la universidad con tildes y un selector para el tipo de gestión (público o privado) en el formulario.
   ![image](https://github.com/user-attachments/assets/808b9dec-f61f-4aa4-9c2b-ef840ee40b77)
+- Incluimos nuevos campos en el formulario, como el estado de licenciamiento con varias opciones y fechas de inicio y fin para acotar las búsquedas.
+  ![image](https://github.com/user-attachments/assets/15afd345-8d92-4106-a5ed-06ae5390563a)
+- Añadimos campos para ingresar el periodo de licenciamiento en años y un selector para departamentos como Lima, Arequipa y Cusco. También incorporamos un botón para enviar las búsquedas.
+- ![image](https://github.com/user-attachments/assets/416d7f56-de65-478f-944a-3532424d0910)
+- Organizamos el formulario para incluir filtros clave como el nombre de la universidad, tipo de gestión, estado de licenciamiento y rangos de fechas. Añadimos listas desplegables con departamentos, provincias y distritos del Perú.
+- ![image](https://github.com/user-attachments/assets/2e859112-0f69-48f6-ba8a-ed99b0a598f8)
+- ![image](https://github.com/user-attachments/assets/b33dd0db-f59d-4544-bc12-eec7eb40f2b8)
 - 
+
+
 
 
 ## CUESTIONARIO
