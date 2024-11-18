@@ -105,6 +105,12 @@
 - La consulta debe ser una respuesta a un formulario html.  
 - Se debe de trabajar con GIT - GITHUB
 
+## EJERCICIO PROPUESTO
+- Link de Github Grupal
+   https://github.com/Q3son/pw1-24b.git
+- Link de Laboratorio 06
+   https://github.com/Q3son/pw1-24b/tree/main/lab06
+  
 # COMMITS
 - Comenzamos extrayendo los datos de las universidades y organizándolos en un archivo .csv con información clave como ubicación, tipo de gestión y estado de licenciamiento. Luego, revisamos la consistencia de los datos antes de subirlos al repositorio grupal.
   ![image](https://github.com/user-attachments/assets/358c0a86-d7b8-47f7-82e2-9d31f6303c5f)
