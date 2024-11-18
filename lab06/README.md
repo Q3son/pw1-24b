@@ -60,8 +60,6 @@
 
 # Perl - Devian - Git - GitHub - Vim - Html - Css - Dockerfile 
 
-[![License][license]][license-file]
-
 [![Perl][Perl]][perl-site]
 [![Debian][Debian]][debian-site]
 [![Git][Git]][git-site]
@@ -105,7 +103,7 @@
 - La consulta debe ser una respuesta a un formulario html.  
 - Se debe de trabajar con GIT - GITHUB
 
-## EJERCICIO PROPUESTO
+## LINKS
 - Link de Github Grupal
    https://github.com/Q3son/pw1-24b.git
 - Link de Laboratorio 06
@@ -239,9 +237,6 @@ Los estándares de codificación son un conjunto de reglas y directrices que los
 
 #
 
-[license]: https://img.shields.io/github/license/rescobedoq/pw2?label=rescobedoq
-[license-file]: https://github.com/rescobedoq/pw2/blob/main/LICENSE
-
 [Perl]: https://img.shields.io/badge/Perl-39457E?style=for-the-badge&logo=perl&logoColor=white
 [perl-site]: https://www.perl.org/
 
@@ -267,8 +262,6 @@ Los estándares de codificación son un conjunto de reglas y directrices que los
 [dockerfile-site]: https://docs.docker.com/engine/reference/builder/
 
 
-[![License][license]][license-file]
-
 [![Perl][Perl]][perl-site]
 [![Debian][Debian]][debian-site]
 [![Git][Git]][git-site]
@@ -278,6 +271,4 @@ Los estándares de codificación son un conjunto de reglas y directrices que los
 [![CSS][CSS]][css-site]
 [![Dockerfile][Dockerfile]][dockerfile-site]
 
-
-[![License][license]][license-file]
 
