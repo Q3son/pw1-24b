@@ -221,33 +221,15 @@ Los estándares de codificación son un conjunto de reglas y directrices que los
 #
 
 ## REFERENCIAS
-https://git-scm.com/book/es/v2
-Aprende todo sobre cómo instalar, usar y dominar Git con ejemplos claros y prácticos. Ideal para principiantes y usuarios avanzados.
+- Dockerfile: Docker. (2024). Dockerfile reference. https://docs.docker.com/reference/dockerfile/
 
-W3Schools: HTML y CSS
-Ofrece tutoriales paso a paso para aprender HTML y CSS. Incluye ejemplos interactivos y ejercicios prácticos.
+- HTML y CSS: Mozilla Developer Network. (2024). HTML y CSS Essentials. https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML_and_CSS
 
-Documentación de Docker
-Referencia oficial para construir imágenes de Docker con Dockerfiles. Contiene ejemplos y mejores prácticas.
+- CGI: W3Schools. (2024). Common Gateway Interface (CGI). https://www.w3schools.com/cgi/
 
-Tutorial de Perl CGI en Tutorialspoint
-Una introducción clara al uso de CGI con Perl, incluyendo cómo generar contenido HTML dinámico desde un servidor.
+- Git: Git Documentation. (2024). Git Reference Manual. https://git-scm.com/docs
 
-MDN Web Docs para HTML
-Documentación completa de HTML, desde etiquetas básicas hasta elementos avanzados como formularios y accesibilidad.
-
-MDN Web Docs para CSS
-Explora guías sobre diseño responsivo, animaciones y personalización con CSS.
-
-Configuración de Docker para aplicaciones web
-Este tutorial te guía en el proceso de contenerizar una aplicación completa usando Docker, desde la configuración del Dockerfile hasta el despliegue.
-
-Proyectos Perl CGI en GitHub
-Repositorios de ejemplos prácticos para usar Perl CGI en proyectos reales. Perfecto para aprender buenas prácticas.
-
-Ejemplo práctico: Contenerizar un servidor web
-Un paso a paso detallado sobre cómo construir y desplegar un servidor web en Docker con ejemplos fáciles de seguir.
-
+- GitHub: GitHub Docs. (2024). GitHub Guides. https://docs.github.com/en
 
 #
 
