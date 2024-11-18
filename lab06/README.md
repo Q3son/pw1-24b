@@ -39,9 +39,10 @@
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
-        <li><a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></li>
-        <li><a href="https://guides.github.com/">https://guides.github.com/</a></li>        
-        <li><a href="https://www.w3schools.com/java/default.asp">https://www.w3schools.com/java/default.asp</a></li>
+        <li><a href="https://www.perlenespanol.com/tutoriales/">https://www.perlenespanol.com/tutoriales/</a></li>
+        <li><a href="https://www.w3schools.com/">https://www.w3schools.com/</a></li>        
+        <li><a href="https://www.w3schools.com/css/default.asp">https://www.w3schools.com/css/default.asp</a></li>
+        <li><a href="https://www.w3schools.com/html/default.asp">https://www.w3schools.com/html/default.asp</a></li>     
     </ul>
 </td>
 </<tr>
