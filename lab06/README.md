@@ -197,9 +197,27 @@
 
 ## CUESTIONARIO
 - ¿Por qué Git y GitHub son herramientas importantes para el curso?
-- ¿Qué conductas éticas deberían promocionarse cuando se usa un Sistema de Control de Versiones?
-- ¿Qué son los entándares de codificación?
+Git y GitHub son herramientas fundamentales para cualquier curso que involucre desarrollo de software o proyectos colaborativos por varias razones
+      - Control de Versiones: Git es un sistema de control de versiones que permite a los desarrolladores seguir el historial de cambios en su código. Esto es crucial para poder revertir a versiones anteriores si algo sale mal, y para entender cómo ha evolucionado el proyecto.
+      - Colaboración: GitHub es una plataforma basada en la web que utiliza Git y facilita la colaboración entre múltiples desarrolladores. Permite compartir y fusionar cambios fácilmente, manejar conflictos y trabajar en diferentes ramas del proyecto simultáneamente.
+      - Transparencia y Registro: Con Git y GitHub, todas las modificaciones son registradas con comentarios y datos del autor, proporcionando un historial completo y transparente de cada contribución.
+      - Automatización y CI/CD: GitHub ofrece integraciones con herramientas de integración continua y despliegue continuo (CI/CD), facilitando la automatización de pruebas y despliegues, lo cual es esencial para mantener la calidad del software.
+      - Comunidad y Soporte: GitHub también sirve como una red social para desarrolladores, permitiendo a los estudiantes aprender de otros proyectos, contribuir a proyectos open source y recibir feedback de la comunidad.
 
+- ¿Qué conductas éticas deberían promocionarse cuando se usa un Sistema de Control de Versiones?
+Cuando se utiliza un Sistema de Control de Versiones como Git, es importante promover ciertas conductas éticas para asegurar un ambiente colaborativo y profesional
+    - Respeto y Colaboración: Valorar y respetar el trabajo de otros, contribuir de manera constructiva y estar abierto a recibir y dar feedback.
+    - Claridad y Transparencia: Hacer commits con comentarios claros y descriptivos que expliquen los cambios realizados. La transparencia ayuda a otros miembros del equipo a entender las modificaciones y el razonamiento detrás de ellas.
+    - Responsabilidad: Asumir la responsabilidad por los cambios realizados, incluyendo la corrección de errores que puedan surgir de tus propias contribuciones.
+    - Honestidad: No atribuirse el trabajo de otros y siempre dar crédito a las contribuciones ajenas. Además, no esconder cambios importantes o realizar modificaciones sin consultarlo con el equipo cuando sea necesario.
+    - Seguridad y Privacidad: Proteger la información sensible y seguir las políticas de seguridad de la organización. No compartir credenciales o datos privados a través del repositorio.
+- ¿Qué son los entándares de codificación?
+Los estándares de codificación son un conjunto de reglas y directrices que los desarrolladores siguen para escribir código de manera consistente y comprensible. Estos estándares pueden incluir
+    - Convenciones de Nomenclatura: Reglas sobre cómo nombrar variables, funciones, clases y otros elementos del código para mantener la consistencia.
+    - Formateo del Código: Directrices sobre la indentación, el uso de espacios y tabulaciones, la longitud máxima de las líneas y otros aspectos de la presentación del código.
+    - Documentación: Requisitos para la documentación del código, como comentarios y descripciones de funciones, para que otros desarrolladores puedan entender fácilmente el propósito y funcionamiento del código.
+    - Buenas Prácticas: Recomendaciones sobre prácticas de programación que mejoran la legibilidad, mantenibilidad y eficiencia del código, como el uso de patrones de diseño, la modularización y la prevención de errores comunes.
+    - Seguridad: Normas para garantizar que el código sea seguro y esté protegido contra vulnerabilidades comunes.
 #
 
 ## REFERENCIAS
