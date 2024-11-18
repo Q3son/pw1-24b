@@ -49,9 +49,9 @@
 <tr><td colspan="6">INTEGRANTES:
 <ul>
 <li>Jack Franco Llaique Chullunquia - jllaiquec@unsa.edu.pe</li>
-<li>Jack Franco Llaique Chullunquia - jllaiquec@unsa.edu.pe</li>
-<li>Jack Franco Llaique Chullunquia - jllaiquec@unsa.edu.pe</li>
-<li>Jack Franco Llaique Chullunquia - jllaiquec@unsa.edu.pe</li>
+<li>Leonardo Juan Jose Baca Calsin - lbacac@unsa.edu.pe</li>
+<li>Giovanni Patrick Mejia Rondan - gmejiar@unsa.edu.pe</li>
+<li>Edson Fabricio Subia Huaicane - esubiah@unsa.edu.pe</li>
 </ul>
 </td>
 </<tr>
@@ -221,23 +221,33 @@ Los estándares de codificación son un conjunto de reglas y directrices que los
 #
 
 ## REFERENCIAS
-- https://git-scm.com/book/es/v2
-- https://guides.github.com/
-- https://www.w3schools.com/java/default.asp
+https://git-scm.com/book/es/v2
+Aprende todo sobre cómo instalar, usar y dominar Git con ejemplos claros y prácticos. Ideal para principiantes y usuarios avanzados.
 
-- Nano vs. Emacs vs. Vim (Editor Wars!) - https://www.linuxtrainingacademy.com/nano-emacs-vim/
-- Emacs vs Vim - https://www.linuxteaching.com/article/emacs_vs_vim
-- Vim or Emacs? The Debate is over… - https://cmd.com/blog/vim-or-emacs-the-debate-is-over/
-- Por qué un editor de texto de hace 40 años machaca al "todopoderoso" Atom - https://www.xataka.com/aplicaciones/por-que-un-editor-de-texto-de-hace-40-anos-le-da-sopas-con-ondas-al-todopoderoso-atom
+W3Schools: HTML y CSS
+Ofrece tutoriales paso a paso para aprender HTML y CSS. Incluye ejemplos interactivos y ejercicios prácticos.
 
-- Tutorial de Vim - http://www.truth.sk/vim/vimbook-OPL.pdf
-- Teclado en Vim - http://www.viemu.com/vi-vim-cheat-sheet.gif
-- Cómo Configurar VIM como VS Code - https://www.youtube.com/watch?v=XgQFzi3VkC8
+Documentación de Docker
+Referencia oficial para construir imágenes de Docker con Dockerfiles. Contiene ejemplos y mejores prácticas.
 
-- Empezando el Curso de Java - https://www.youtube.com/playlist?list=PLw8RQJQ8K1yQDqPyDRzt-h8YlBj96OwMP
-- The Java® Language Specification Java SE 11 Edition - https://docs.oracle.com/javase/specs/jls/se11/html/index.html
-- The Java™ Tutorials - https://docs.oracle.com/javase/tutorial/
-- Java Course - http://www.vias.org/javacourse/wrapnt4F38D8_object_oriented_programming.html
+Tutorial de Perl CGI en Tutorialspoint
+Una introducción clara al uso de CGI con Perl, incluyendo cómo generar contenido HTML dinámico desde un servidor.
+
+MDN Web Docs para HTML
+Documentación completa de HTML, desde etiquetas básicas hasta elementos avanzados como formularios y accesibilidad.
+
+MDN Web Docs para CSS
+Explora guías sobre diseño responsivo, animaciones y personalización con CSS.
+
+Configuración de Docker para aplicaciones web
+Este tutorial te guía en el proceso de contenerizar una aplicación completa usando Docker, desde la configuración del Dockerfile hasta el despliegue.
+
+Proyectos Perl CGI en GitHub
+Repositorios de ejemplos prácticos para usar Perl CGI en proyectos reales. Perfecto para aprender buenas prácticas.
+
+Ejemplo práctico: Contenerizar un servidor web
+Un paso a paso detallado sobre cómo construir y desplegar un servidor web en Docker con ejemplos fáciles de seguir.
+
 
 #
 
